@@ -2,8 +2,9 @@
 
 [live deploy](https://glistening-beijinho-02ff9e.netlify.app/)
 
-### some notes:
 部署在netlify的小demo, 用到了vue3/vite + tailwind +高德api，可用来查询当地天气，收藏城市放在localstorage
+
+### some notes:
 
 1. transition 切换组件淡出淡入
    ```
@@ -65,6 +66,7 @@
   cityLists.value = await Promise.all(requests)
    ```
 7. 路由守卫+ 路由meta属性，动态修改document.title
+
   ```
     router.beforeEach((to, from, next) => { 
     document.title = `${to.params.district ? `${to.params.district}` : to.meta.title} | The Local Weather`
@@ -72,9 +74,3 @@
     next()
   })
   ```
-
-
-
-
-
-
